@@ -1,0 +1,72 @@
+<h1>new goal<h1>
+
+<%= form_with scope: :goal, url: goals_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :monday %><br />
+    <%= form.label :monday, "Yes", :value => "true"  %>
+    <%= form.radio_button :monday, true %>
+    <%= form.label :monday, "No", :value => "false" %>
+    <%= form.radio_button :monday, false, :checked => true %>
+  </p>
+ 
+  <p>
+    <%= form.label :tuesday %><br />
+    <%= form.label :tuesday, "Yes", :value => "true"  %>
+    <%= form.radio_button :tuesday, true %>
+    <%= form.label :tuesday, "No", :value => "false" %>
+    <%= form.radio_button :tuesday, false, :checked => true %>
+  </p>
+
+  <p>
+    <%= form.label :wednesday %><br />
+    <%= form.label :wednesday, "Yes", :value => "true"  %>
+    <%= form.radio_button :wednesday, true %>
+    <%= form.label :wednesday, "No", :value => "false" %>
+    <%= form.radio_button :wednesday, false, :checked => true %>
+  </p>
+
+  <p>
+    <%= form.label :thursday %><br />
+    <%= form.label :thursday, "Yes", :value => "true"  %>
+    <%= form.radio_button :thursday, true %>
+    <%= form.label :thursday, "No", :value => "false" %>
+    <%= form.radio_button :thursday, false, :checked => true %>
+  </p>
+
+  <p>
+    <%= form.label :friday %><br />
+    <%= form.label :friday, "Yes", :value => "true"  %>
+    <%= form.radio_button :friday, true %>
+    <%= form.label :friday, "No", :value => "false" %>
+    <%= form.radio_button :friday, false, :checked => true %>
+  </p>
+
+  <p>
+    <%= form.label :saturday %><br />
+    <%= form.label :saturday, "Yes", :value => "true"  %>
+    <%= form.radio_button :saturday, true %>
+    <%= form.label :saturday, "No", :value => "false" %>
+    <%= form.radio_button :saturday, false, :checked => true %>
+  </p>
+
+  <p>
+    <%= form.label :sunday %><br />
+    <%= form.label :sunday, "Yes", :value => "true"  %>
+    <%= form.radio_button :sunday, true %>
+    <%= form.label :sunday, "No", :value => "false" %>
+    <%= form.radio_button :sunday, false, :checked => true %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

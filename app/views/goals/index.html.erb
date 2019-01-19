@@ -1,0 +1,18 @@
+
+<h1>All Goals</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @goals.each do |goal| %>
+    <tr>
+      <td><%= goal.title %></td>
+      <td><%= goal.description %></td>
+      <td><%= link_to 'Show', goal_path(goal) %></td>
+    </tr>
+  <% end %>
+</table>

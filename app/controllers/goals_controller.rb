@@ -18,6 +18,11 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
   end
 
+  def today_goal_exist?
+    return true if @goal.success.include?(Date.today) || @goal.failure.include?(Date.today)
+    return false
+  end
+
   private
     def goal_params
       params.require(:goal).permit(:title, :description, :status)

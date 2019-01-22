@@ -15,4 +15,17 @@
       <td><%= link_to 'Show', goal_path(goal) %></td>
     </tr>
   <% end %>
+
+
+</table>
+
+<table>
+<h1>Today_goals</h1>
+  <% @goals.select{|i| i.is_today?}.each do |goal|%>
+    <tr>
+      <td><%= goal.title %></td>
+      <td><%= goal.description %></td>
+      <td><%= link_to "Add Success", goal_success_updater_path(goal)%></td>
+    </tr>
+  <% end %>
 </table>

@@ -1,4 +1,4 @@
-class RemoveSuccess
+class RemoveSucces
   attr_reader :goal, :date
 
   def initialize(goal,date)

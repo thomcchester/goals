@@ -13,7 +13,6 @@ class GoalsController < ApplicationController
     redirect_to @goal
   end
 
-
   def show
     @goal = Goal.find(params[:id])
   end
@@ -25,6 +24,6 @@ class GoalsController < ApplicationController
 
   private
     def goal_params
-      params.require(:goal).permit(:title, :description, :status)
+      params.require(:goal).permit(:title, :description, :status, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)
     end
 end

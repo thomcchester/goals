@@ -8,3 +8,19 @@
   <strong>Description:</strong>
   <%= @goal.description %>
 </p>
+
+<p>
+  <strong>Total Success Rate</strong>
+  <%= GoalStats.new(@goal).success_rate_total * 100%>%
+</p>
+
+<p>
+  <strong>Total Failure Rate</strong>
+  <%= GoalStats.new(@goal).failure_rate_total%>%
+</p>
+
+<p>
+
+
+
+</p>
